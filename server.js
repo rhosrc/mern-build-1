@@ -2,7 +2,8 @@
 
 require('dotenv').config();
 const {
-    PORT = 3001
+    PORT = 3001,
+    DATABASE_URL
 } = process.env
 // import express from 'express
 const express = require('express');
