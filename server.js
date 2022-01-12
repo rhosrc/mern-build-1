@@ -2,8 +2,8 @@
 
 require('dotenv').config();
 const {
-    PORT = 3001,
-    DATABASE_URL
+    DATABASE_URL,
+    PORT = 3001
 } = process.env
 // import express from 'express
 const express = require('express');
@@ -24,7 +24,7 @@ const morgan = require('morgan');
 // DATABASE CONNECTION
 
 // Establish Connection
-mongoose.connect(process.env.DATABASE_URL);
+mongoose.connect(DATABASE_URL);
 
 const db = mongoose.connection;
 db.on('error', function (err) {
